@@ -1,0 +1,135 @@
+{
+	"products": [
+		{
+			"id": "sneaker5",
+			"image": "./images/14-removebg-preview.png",
+			"title": "Nike React",
+			"description": "Originally introduced in 1982 as a basketball sneaker, the Nike Air Force 1 remains a classic in modern day times but is more recognizable as a streetwear icon while",
+			"availableSizes": ["S", "XL", "XXL"],
+			"price": 929.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+
+		{
+			"id": "sneaker6",
+			"image": "./images/6-removebg-preview.png",
+			"title": " Nike Air Max 1",
+			"description": "Time to get playful. The first Nike sneaker to display Air technology on its outsole, the Nike Air Max 180 (180-degree views of visible air)",
+			"availableSizes": ["XS", "M", "S", "XXL"],
+			"price": 883.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker7",
+			"image": "./images/7-removebg-preview.png",
+			"title": "Nike Cortez",
+			"description": "Cutting edge technology  invloved in making these shoes on its outsole, the Nike Air Max 180 (180-degree views of visible air)",
+			"availableSizes": ["XS", "S", "XL"],
+			"price": 542.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker8",
+			"image": "./images/8-removebg-preview.png",
+			"title": "Nike Air Max 97",
+			"description": "Nowhere is that more evident than in this techy-looking hybrid sneaker, which brings together two Nike designs",
+			"availableSizes": ["X", "S", "XL"],
+			"price": 341.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker9",
+			"image": "./images/9-removebg-preview.png",
+			"title": "Nike Flyknit Racer",
+			"description": "Time to get playful. The first Nike sneaker to display Air technology on its outsole, the Nike Air Max 180 (180-degree views of visible air)",
+			"availableSizes": ["X", "M", "XL", "XXL"],
+			"price": 182.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker10",
+			"image": "./images/10-removebg-preview.png",
+			"title": "Nike Air Max 95",
+			"description": "Based on its previous succes, nike decided to release another banger, and they outdid themselves with these shoes.",
+			"availableSizes": ["X", "XS", "XL", "XXL"],
+			"price": 99.12,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker1",
+			"image": "./images/1-removebg-preview.png",
+			"title": "Nike Roshe Run",
+			"description": "The upper features opaque color blocking influenced by modern electric cars. But there are some traditional features, too",
+			"availableSizes": ["XXL", "L"],
+			"price": 629.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker11",
+			"image": "./images/2-removebg-preview.png",
+			"title": "Nike Air Max 95",
+			"description": "Time to get playful. The first Nike sneaker to display Air technology on its outsole, the Nike Air Max 180 (180-degree views of visible air)",
+			"availableSizes": ["XS", "L", "XL", "XXL"],
+			"price": 99.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker2",
+			"image": "./images/3-removebg-preview.png",
+			"title": "Air Jordan Ones",
+			"description": "Nowhere is that more evident than in this techy-looking hybrid sneaker, which brings together two Nike designs",
+			"availableSizes": ["L", "XL", "XXL"],
+			"price": 137.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker3",
+			"image": "./images/4-removebg-preview.png",
+			"title": "ASICS Kayano",
+			"description": "Arguably the most iconic model in the Air Max lineup, the Air Max 90 celebrated its 30th anniversary last fall. ",
+			"availableSizes": ["XS", "L", "XL"],
+			"price": 222.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker4",
+			"image": "./images/5-removebg-preview.png",
+			"title": "Nike Air Huarache",
+			"description": "Sure, Nike Air shoes have been around since the ’70s, but that doesn’t mean the company isn’t continuing to innovate. ",
+			"availableSizes": ["XS", "M", "XL"],
+			"price": 439.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker5",
+			"image": "./images/11-removebg-preview.png",
+			"title": "Nike Air Streets",
+			"description": "Our journey through Air Max history, the 1994 Air Max (predictably labelled the Air Max 94) i",
+			"availableSizes": ["L", "XL", "XXL"],
+			"price": 929.9,
+			"count": 1,
+			"alreadyExist": false
+		},
+		{
+			"id": "sneaker13",
+			"image": "./images/12-removebg-preview.png",
+			"title": "Nike Air VaporMax",
+			"description": "Entering more unfamiliar territory on our journey through Air Max history, the 1994 Air Max (predictably labelled the Air Max 94) i",
+			"availableSizes": ["XS", "S", "XL", "XXL"],
+			"price": 929.9,
+			"count": 1,
+			"alreadyExist": false
+		}
+	]
+}
