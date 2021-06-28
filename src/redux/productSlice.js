@@ -52,10 +52,34 @@ const cartSlice = createSlice({
 				(item) => item.id !== action.payload.id
 			);
 		},
+		emptyCart: (state) => {
+			state.cartItems = [];
+		},
+	},
+});
+
+const paymentSlice = createSlice({
+	name: 'payment',
+	initialState: false,
+	reducers: {
+		handleTrue: (state) => {
+			return (state = true);
+		},
+		handleFalse: (state) => {
+			return (state = false);
+		},
 	},
 });
 
 const { actions: productAction, reducer: productReducer } = productSlice;
 const { actions: cartAction, reducer: cartReducer } = cartSlice;
+const { actions: paymentAction, reducer: paymentReducer } = paymentSlice;
 
-export { productAction, productReducer, cartReducer, cartAction };
+export {
+	productAction,
+	productReducer,
+	cartReducer,
+	cartAction,
+	paymentAction,
+	paymentReducer,
+};

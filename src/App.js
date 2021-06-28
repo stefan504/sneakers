@@ -6,6 +6,8 @@ import Products from './components/Products';
 import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Filter from './components/Filter';
+import Checkout from './components/Checkout';
+import Payment from './components/Payment';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import data from './data.json';
@@ -46,6 +48,12 @@ function App() {
 						product={product}
 						setProduct={setProduct}
 					/>
+				</Route>
+				<Route exact path="/checkout">
+					<Checkout />
+				</Route>
+				<Route exact path="/payment">
+					<Payment />
 				</Route>
 			</Switch>
 			<Footer />

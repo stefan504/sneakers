@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { cartAction } from '../redux/productSlice';
-
+import { Link } from 'react-router-dom';
 const Cart = () => {
 	const cartState = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
@@ -49,7 +49,9 @@ const Cart = () => {
 					{total()}
 				</h2>
 				{cartState.cartItems.length > 0 ? (
-					<button className="checkout">To Checkout</button>
+					<Link to="/checkout" className="checkout">
+						To Checkout
+					</Link>
 				) : (
 					''
 				)}

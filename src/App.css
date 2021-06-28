@@ -216,6 +216,41 @@ body {
 	padding: 1rem 4rem;
 }
 .checkout {
+	text-decoration: none;
+	padding: 0.4rem;
+	border: none;
+	background-color: var(--dark-brown);
+	color: var(--white);
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 1.3rem;
+	height: fit-content;
+}
+.remove {
+	cursor: pointer;
+}
+
+/* Checkout */
+.checkout-all {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+.cart-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px dotted rgba(110, 99, 99, 0.3);
+}
+.checkout-content {
+	border: 1px solid rgba(128, 128, 128, 0.4);
+	width: 50%;
+	height: fit-content;
+	width: 100%;
+	color: var(--white);
+}
+
+.checkout-btn {
+	text-decoration: none;
 	padding: 0.4rem;
 	border: none;
 	background-color: var(--dark-brown);
@@ -224,10 +259,72 @@ body {
 	cursor: pointer;
 	font-size: 1.3rem;
 }
-.remove {
-	cursor: pointer;
+
+.your-cart {
+	margin-bottom: 3rem;
+}
+.link-checkout {
+	margin-bottom: 2rem;
+}
+.cart-img {
+	width: auto;
+}
+.cart-img img {
+	object-fit: cover;
+	width: 70px;
+	height: 70px;
 }
 
+.shipping {
+	color: white;
+	padding-left: 1rem;
+}
+.shipping ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* PAYMENT */
+.form-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 20px;
+	color: var(--white);
+	/* text-align: center; */
+}
+.confirm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.payment-container {
+	display: flex;
+	justify-content: center;
+}
+.form-container > * {
+	padding: 0.3rem;
+}
+.total {
+	color: var(--white);
+}
+.order {
+	display: flex;
+	justify-content: center;
+}
+.order h2 {
+	width: 80%;
+	text-align: center;
+	color: var(--white);
+}
+.order h2 p {
+	font-size: 0.9rem;
+
+	text-align: center;
+	color: var(--white);
+}
+/* PAYMENT */
+
+/* Checkout */
 /* CART */
 
 /* MODAL */
@@ -320,5 +417,19 @@ body {
 	}
 	.close-modal {
 		left: 0;
+	}
+}
+@media (max-width: 318px) {
+	.form-container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		padding: 20px;
+		color: var(--white);
+		/* text-align: center; */
+	}
+}
+@media (max-width: 357px) {
+	.nav-container {
+		padding: 1.5rem 0.5rem;
 	}
 }

@@ -14,12 +14,12 @@ const Navbar = () => {
 
 				{cartState.cartItems && cartState.cartItems.length > 0 ? (
 					<Link to="/cart">
-						<i class="fas fa-shopping-cart"></i>
+						<i className="fas fa-shopping-cart"></i>
 						<span className="font">({cartState.cartItems.length})</span>
 					</Link>
 				) : (
 					<Link to="/cart">
-						<i class="fas fa-shopping-cart"></i>
+						<i className="fas fa-shopping-cart"></i>
 					</Link>
 				)}
 			</div>
