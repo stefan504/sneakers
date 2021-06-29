@@ -48,7 +48,7 @@ const Filter = ({
 
 	return (
 		<div className="sort">
-			<h3>Products: {productState.length + 1} </h3>
+			<h3>Products: {productState.length} </h3>
 			<div className="sort-by">
 				<h3>Sort by: </h3>
 				<form>

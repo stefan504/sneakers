@@ -6,11 +6,10 @@
 			"title": "Nike React",
 			"description": "Originally introduced in 1982 as a basketball sneaker, the Nike Air Force 1 remains a classic in modern day times but is more recognizable as a streetwear icon while",
 			"availableSizes": ["S", "XL", "XXL"],
-			"price": 929.9,
+			"price": 326.9,
 			"count": 1,
 			"alreadyExist": false
 		},
-
 		{
 			"id": "sneaker6",
 			"image": "./images/6-removebg-preview.png",
@@ -54,7 +53,7 @@
 		{
 			"id": "sneaker10",
 			"image": "./images/10-removebg-preview.png",
-			"title": "Nike Air Max 95",
+			"title": "Nike Air Max Force",
 			"description": "Based on its previous succes, nike decided to release another banger, and they outdid themselves with these shoes.",
 			"availableSizes": ["X", "XS", "XL", "XXL"],
 			"price": 99.12,
@@ -112,12 +111,12 @@
 			"alreadyExist": false
 		},
 		{
-			"id": "sneaker5",
+			"id": "sneaker135",
 			"image": "./images/11-removebg-preview.png",
 			"title": "Nike Air Streets",
 			"description": "Our journey through Air Max history, the 1994 Air Max (predictably labelled the Air Max 94) i",
 			"availableSizes": ["L", "XL", "XXL"],
-			"price": 929.9,
+			"price": 109.9,
 			"count": 1,
 			"alreadyExist": false
 		},
@@ -127,7 +126,7 @@
 			"title": "Nike Air VaporMax",
 			"description": "Entering more unfamiliar territory on our journey through Air Max history, the 1994 Air Max (predictably labelled the Air Max 94) i",
 			"availableSizes": ["XS", "S", "XL", "XXL"],
-			"price": 929.9,
+			"price": 713.9,
 			"count": 1,
 			"alreadyExist": false
 		}

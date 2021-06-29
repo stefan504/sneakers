@@ -50,7 +50,7 @@ const Cart = () => {
 				</h2>
 				{cartState.cartItems.length > 0 ? (
 					<Link to="/checkout" className="checkout">
-						To Checkout
+						Checkout
 					</Link>
 				) : (
 					''
