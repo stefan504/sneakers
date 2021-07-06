@@ -2,7 +2,7 @@ import React from 'react';
 import { useField, ErrorMessage } from 'formik';
 
 export const TextField = ({ label, ...props }) => {
-	const [field, meta] = useField(props);
+	const [field] = useField(props);
 
 	return (
 		<>

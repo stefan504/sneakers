@@ -14,8 +14,9 @@ const Navbar = () => {
 
 				{cartState.cartItems && cartState.cartItems.length > 0 ? (
 					<Link to="/cart">
-						<i className="fas fa-shopping-cart"></i>
-						<span className="font">({cartState.cartItems.length})</span>
+						<i className="fas fa-shopping-cart">
+							<span className="font">({cartState.cartItems.length})</span>
+						</i>
 					</Link>
 				) : (
 					<Link to="/cart">
