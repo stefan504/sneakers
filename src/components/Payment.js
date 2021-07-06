@@ -2,6 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { paymentAction } from '../redux/productSlice';
 import { cartAction } from '../redux/productSlice';
+import { Formik, Form } from 'formik';
+import { TextField } from './TextField';
+import * as Yup from 'yup';
 
 const Payment = () => {
 	const cartState = useSelector((state) => state.cart);
@@ -9,56 +12,88 @@ const Payment = () => {
 	const dispatch = useDispatch();
 	const paymentState = useSelector((state) => state.payment);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
+	const handleSubmit = () => {
 		dispatch(paymentAction.handleTrue());
 		dispatch(cartAction.emptyCart());
 	};
-	console.log(paymentState);
+
+	const validate = Yup.object({
+		firstName: Yup.string()
+			.max(15, 'Must be 15 characters or less')
+			.required('First Name Required'),
+		lastName: Yup.string()
+			.max(20, 'Must be 20 characters or less')
+			.required('Last Name Required'),
+		email: Yup.string().email('Email is invalid').required('Email Required'),
+		street: Yup.string().required('Street Required'),
+		number: Yup.number().required('Street number Required'),
+		country: Yup.string().required('Country is Required'),
+		city: Yup.string().required('City is Required'),
+		postalCode: Yup.number().required('Postal code is Required'),
+	});
 
 	if (paymentState === false) {
 		return (
 			<div className="payment-container">
-				<form className="form-container" onSubmit={handleSubmit}>
-					<label htmlFor="">First Name: </label>
-					<input type="text" />
-					<label htmlFor="">Last Name: </label>
-					<input type="text" />
-					<label htmlFor="">Email: </label>
-					<input type="email" />
-					<label htmlFor="">Street: </label>
-					<input type="text" />
-					<label htmlFor="">Street number: </label>
-					<input type="numbers" />
-					<label htmlFor="">Country: </label>
-					<input type="text" />
-					<label htmlFor="">City: </label>
-					<input type="text" />
-					<label htmlFor="">Postal Code: </label>
-					<input type="numbers" />
-					<div className="total">
-						<h3>
-							{' '}
-							Total price: <span className="dollar">$</span>
-							{cartState.cartItems
-								.reduce((a, c) => a + c.price * c.count, 0)
-								.toFixed(1)}
-							{/* {!checked
-					? cartState.cartItems
-							.reduce((a, c) => a + c.price * c.count, 0)
-							.toFixed(1)
-					: cartState.cartItems
-							.reduce((a, c) => a + c.price * c.count, 7)
-							.toFixed(1)} */}
-						</h3>
-					</div>
+				<Formik
+					onSubmit={() => handleSubmit()}
+					initialValues={{
+						firstName: '',
+						lastName: '',
+						email: '',
+						street: '',
+						number: '',
+						country: '',
+						city: '',
+						postalCode: '',
+					}}
+					validationSchema={validate}
+				>
+					{(formik) => (
+						<>
+							<Form className="form-container">
+								<TextField label="First name: " name="firstName" type="text" />
+								<TextField label="Last name: " name="lastName" type="text" />
+								<TextField label="Email: " name="email" type="email" />
+								<TextField label="Street: " name="street" type="text" />
+								<TextField
+									label="Street number: "
+									name="number"
+									type="number"
+								/>
+								<TextField label="Country: " name="country" type="text" />
+								<TextField label="City: " name="city" type="text" />
+								<TextField
+									label="Postal Code: "
+									name="postalCode"
+									type="number"
+								/>
+								<div className="total">
+									<h3>
+										{' '}
+										Total price: <span className="dollar">$</span>
+										{cartState.cartItems
+											.reduce((a, c) => a + c.price * c.count, 7)
+											.toFixed(1)}
+										{/* {!checked
+								? cartState.cartItems
+										.reduce((a, c) => a + c.price * c.count, 0)
+										.toFixed(1)
+								: cartState.cartItems
+										.reduce((a, c) => a + c.price * c.count, 7)
+										.toFixed(1)} */}
+									</h3>
+								</div>
 
-					<div className="confirm">
-						<button type="submit" className="confirm-payment checkout">
-							Confirm payment
-						</button>
-					</div>
-				</form>
+								<div className="confirm">
+									<button type="submit" className="confirm-payment checkout">
+										Confirm payment
+									</button>
+								</div>
+							</Form>
+						</>
+					)}
+				</Formik>
 			</div>
 		);
 	} else {

@@ -18,6 +18,8 @@ function App() {
 	const [size, setSize] = useState('');
 	const [value, setValue] = useState('');
 	const [product, setProduct] = useState(null);
+	const [added, setAdded] = useState(false);
+
 	return (
 		<BrowserRouter>
 			<Navbar cartItems={cartItems} />
@@ -47,6 +49,7 @@ function App() {
 
 						product={product}
 						setProduct={setProduct}
+						setAdded={setAdded}
 					/>
 				</Route>
 				<Route exact path="/checkout">
@@ -57,6 +60,7 @@ function App() {
 				</Route>
 			</Switch>
 			<Footer />
+			{added ? <div className="added-to-favs">✔️Added to cart✔️</div> : ''}
 		</BrowserRouter>
 	);
 }

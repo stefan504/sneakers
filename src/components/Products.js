@@ -4,14 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { cartAction } from '../redux/productSlice';
 
 const Products = (props) => {
-	const { product, setProduct } = props;
-
+	const { product, setProduct, setAdded } = props;
 	const productState = useSelector((state) => state.products);
 
 	const dispatch = useDispatch();
 
 	const addToCarts = (prod) => {
 		dispatch(cartAction.addToCart(prod));
+		setAdded(true);
+		setTimeout(() => {
+			setAdded(false);
+		}, 2500);
 	};
 
 	const openModal = (product) => {

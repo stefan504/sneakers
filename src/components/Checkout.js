@@ -6,7 +6,7 @@ import { paymentAction } from '../redux/productSlice';
 
 const Checkout = () => {
 	const cartState = useSelector((state) => state.cart);
-	const [checked, setChecked] = useState(null);
+	const [checked, setChecked] = useState(true);
 	const handleChange = (e) => {
 		setChecked(e.target.checked);
 	};
@@ -42,14 +42,11 @@ const Checkout = () => {
 					<div className="total">
 						<h2>
 							Total: <span className="dollar">$</span>
-							{!checked
-								? cartState.cartItems
-										.reduce((a, c) => a + c.price * c.count, 0)
-										.toFixed(1)
-								: cartState.cartItems
-										.reduce((a, c) => a + c.price * c.count, 7)
-										.toFixed(1)}
+							{cartState.cartItems
+								.reduce((a, c) => a + c.price * c.count, 7)
+								.toFixed(1)}
 						</h2>
+						<p>(including shipping $7)</p>
 					</div>
 				</div>
 				<div className="link-checkout">
@@ -75,6 +72,7 @@ const Checkout = () => {
 					<li>
 						{' '}
 						<input
+							checked
 							type="checkbox"
 							id="dhl"
 							name="dhl"
