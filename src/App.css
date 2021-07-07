@@ -480,4 +480,11 @@ body {
 	.nav-container {
 		padding: 1.5rem 0.5rem;
 	}
+	.checkout-all {
+		display: flex;
+		flex-direction: column;
+	}
+	.checkout-content {
+		padding-left: 0;
+	}
 }
