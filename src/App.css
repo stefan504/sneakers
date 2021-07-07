@@ -244,6 +244,7 @@ body {
 	border: 2px dotted rgba(110, 99, 99, 0.3);
 }
 .checkout-content {
+	padding-left: 1rem;
 	border: 1px solid rgba(128, 128, 128, 0.4);
 	width: 50%;
 	height: fit-content;
