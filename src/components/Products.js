@@ -59,7 +59,11 @@ const Products = (props) => {
 					})}
 				</ul>
 				{product && (
-					<Modal onRequestClose={closeModal} isOpen={true}>
+					<Modal
+						onRequestClose={closeModal}
+						isOpen={true}
+						style={{ background: 'gray' }}
+					>
 						<button className="close-modal" onClick={closeModal}>
 							X
 						</button>
