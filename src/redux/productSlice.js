@@ -7,7 +7,7 @@ const productSlice = createSlice({
 	reducers: {
 		filtering: (state, action) => {
 			if (action.payload === '') return data.products;
-			return state.filter((filter) => {
+			return data.products.filter((filter) => {
 				return filter.availableSizes.indexOf(action.payload) >= 0;
 			});
 		},
